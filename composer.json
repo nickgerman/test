@@ -2,7 +2,7 @@
     "name": "reneecampanilla/experiment-component",
     "description": "Experiment module",
     "type": "composer-plugin",
-    "homepage": "https://github.com/reneecampanilla/experimentComponent",
+    "homepage": "https://github.com/reneecampanilla/experiment-component",
     "license": "MIT",
     "authors": [
       {
@@ -13,6 +13,6 @@
       }
     ],
     "require": {
-        "composer-plugin-api": "^1.0.0"
+        "php": ">=5.4.0"
     }
 }
