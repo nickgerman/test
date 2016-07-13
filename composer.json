@@ -13,7 +13,8 @@
       }
     ],
     "require": {
-      "composer-plugin-api": "^1.0"
+        "composer-plugin-api": "^1.0",
+        "composer/composer": "*"
     },
     "autoload": {
         "psr-4": {
@@ -22,5 +23,7 @@
     },
     "extra": {
         "class": "SitePoint\\Plugin"
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
