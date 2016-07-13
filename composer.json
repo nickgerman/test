@@ -15,7 +15,12 @@
     "require": {
       "composer-plugin-api": "^1.0"
     },
+    "autoload": {
+        "psr-4": {
+            "SitePoint\\": "src"
+        }
+    },
     "extra": {
-        "class": "My\\Plugin"
+        "class": "SitePoint\\Plugin"
     }
 }

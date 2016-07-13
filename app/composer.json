@@ -1,0 +1,14 @@
+{
+    "name": "sitepoint/app",
+    "require": {
+        "sitepoint/plugin": "*"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../sitepoint-plugin"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
