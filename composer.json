@@ -17,11 +17,11 @@
     },
     "autoload": {
         "psr-4": {
-            "SitePoint\\": "src"
+            "Renee\\": "src"
         }
     },
     "extra": {
-        "class": "SitePoint\\Plugin"
+        "class": "Renee\\Plugin"
     },
     "minimum-stability": "dev",
     "prefer-stable": true

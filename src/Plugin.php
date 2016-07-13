@@ -1,5 +1,5 @@
 <?php
-namespace SitePoint;
+namespace Renee;
 use Composer\Composer;
 use Composer\IO\IOInterface;
 use Composer\Package\Link;
