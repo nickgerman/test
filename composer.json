@@ -12,7 +12,10 @@
         "role": "Developer"
       }
     ],
-    "prefer-stable": true,
-    "minimum-stability": "dev",
-    "require": {}
+    "require": {
+      "composer-plugin-api": "^1.0"
+    },
+    "extra": {
+        "class": "My\\Plugin"
+    }
 }
