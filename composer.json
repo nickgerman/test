@@ -17,11 +17,11 @@
     },
     "autoload": {
         "psr-4": {
-            "Renee\\": "src"
+            "Container\\": "src"
         }
     },
     "extra": {
-        "class": "Renee\\Plugin"
+        "class": "Container\\Plugin"
     },
     "minimum-stability": "dev",
     "prefer-stable": true

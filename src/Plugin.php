@@ -1,5 +1,5 @@
 <?php
-namespace Renee;
+namespace Container;
 use Composer\Composer;
 use Composer\IO\IOInterface;
 use Composer\Package\Link;
