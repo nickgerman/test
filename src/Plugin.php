@@ -4,6 +4,7 @@ use Composer\Composer;
 use Composer\IO\IOInterface;
 use Composer\Package\Link;
 use Composer\Plugin\PluginInterface;
+use Yii;
 use yii\base\Object;
 use yii\db\Connection;
 use yii\di\Container;
