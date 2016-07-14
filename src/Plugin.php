@@ -4,12 +4,11 @@ use Composer\Composer;
 use Composer\IO\IOInterface;
 use Composer\Package\Link;
 use Composer\Plugin\PluginInterface;
-use yii\db\Connection;
 
 class Plugin implements PluginInterface
 {
 
-    public function __construct(Connection $db, $config = [])
+    public function __construct(yii\db\Connection $db, $config = [])
     {
       print_r($db);
     }
