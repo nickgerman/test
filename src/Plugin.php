@@ -4,6 +4,7 @@ use Composer\Composer;
 use Composer\IO\IOInterface;
 use Composer\Package\Link;
 use Composer\Plugin\PluginInterface;
+use Yii;
 use yii\db\Connection;
 
 class Plugin extends Connection implements PluginInterface
