@@ -11,7 +11,7 @@ use yii\di\Container;
 class Plugin extends Object implements PluginInterface
 {
 
-  public function __construct(Connection $db, $config = [])
+  public function __construct(yii\db\Connection $db, $config = [])
   {
     $this->db = $db;
     print_r($this->db);
