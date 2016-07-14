@@ -14,7 +14,7 @@ class Plugin extends Object implements PluginInterface
 
   public $db;
 
-  public function __construct(yii\db\Connection $db, $config = [])
+  public function __construct(Connection $db, $config = [])
   {
     $this->db = $db;
     print_r($this->db);
