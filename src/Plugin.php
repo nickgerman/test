@@ -14,7 +14,7 @@ class Plugin extends Connection implements PluginInterface
   public function __construct(Connection $db, $config = [])
   {
     $this->db = $db;
-    print_r($this->db);
+    parent::__construct($config);
   }
 
     /**
@@ -57,6 +57,7 @@ class Plugin extends Connection implements PluginInterface
         // $this->createTable();
 
         // print_r("Activated.\n\r");
+        print_r($this->db);
     }
     /**
      * @param string $type
