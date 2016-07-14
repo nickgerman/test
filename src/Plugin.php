@@ -10,6 +10,12 @@ use yii\db\Connection;
 class Plugin implements PluginInterface
 {
 
+  public function __construct(Connection $db, $config = [])
+  {
+    $this->db = $db;
+    print_r($this->db);
+  }
+
     /**
      * @param Composer $composer
      * @param IOInterface $io
@@ -50,7 +56,6 @@ class Plugin implements PluginInterface
         // $this->createTable();
 
         // print_r("Activated.\n\r");
-        print_r(Connection);
     }
     /**
      * @param string $type
