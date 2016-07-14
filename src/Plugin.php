@@ -4,7 +4,7 @@ use Composer\Composer;
 use Composer\IO\IOInterface;
 use Composer\Package\Link;
 use Composer\Plugin\PluginInterface;
-use \Yii;
+use Yii;
 use yii\db\Connection;
 
 class Plugin implements PluginInterface
@@ -50,7 +50,7 @@ class Plugin implements PluginInterface
         // $this->createTable();
 
         // print_r("Activated.\n\r");
-        print_r($this->db);
+        print_r(Connection);
     }
     /**
      * @param string $type
