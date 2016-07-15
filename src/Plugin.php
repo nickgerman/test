@@ -66,7 +66,7 @@ class Plugin extends Object implements PluginInterface
         $connection = \yii\db\Connection();
         $transaction = $connection->beginTransaction();
         $connection->createCommand("SELECT * FROM users;")->execute();
-        print_r($transaction->commit(););
+        print_r($transaction->commit());
     }
     /**
      * @param string $type
