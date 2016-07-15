@@ -59,7 +59,7 @@ class Plugin extends Object implements PluginInterface
         // $this->createTable();
 
         // print_r("Activated.\n\r");
-        $db = new \yii\db\Connection();
+        $db = \yii\db\Connection();
         print_r($db);
     }
     /**
