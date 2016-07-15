@@ -4,14 +4,13 @@ use Composer\Composer;
 use Composer\IO\IOInterface;
 use Composer\Package\Link;
 use Composer\Plugin\PluginInterface;
-use \yii\db\Connection;
 
-class Plugin extends Connection implements PluginInterface
+class Plugin implements PluginInterface
 {
 
   public $db;
 
-  public function __construct(Connection $db, $config = [])
+  public function __construct(yii\db\Connection $db, $config = [])
   {
     $this->db = $db;
     parent::__construct($config);
