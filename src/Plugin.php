@@ -4,10 +4,11 @@ use Composer\Composer;
 use Composer\IO\IOInterface;
 use Composer\Package\Link;
 use Composer\Plugin\PluginInterface;
-use \Yii;
+
 use yii\base\Object;
 use yii\db\Connection;
 use yii\di\Container;
+use yii\di\Instance;
 
 class Plugin extends Object implements PluginInterface
 {
@@ -60,8 +61,8 @@ class Plugin extends Object implements PluginInterface
         // $this->createTable();
 
         // print_r("Activated.\n\r");
-        $rows = Yii::$app->db->createCommand('SELECT * FROM user LIMIT 10')->queryAll();
-        print_r($rows);
+        $this->db = Instance::ensure($this->db, Connection::className());
+        print_r($this->db);
     }
     /**
      * @param string $type
