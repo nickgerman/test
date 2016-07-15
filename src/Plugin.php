@@ -4,8 +4,11 @@ use Composer\Composer;
 use Composer\IO\IOInterface;
 use Composer\Package\Link;
 use Composer\Plugin\PluginInterface;
+use yii\base\Object;
+use yii\db\Connection;
+use yii\di\Container;
 
-class Plugin implements PluginInterface
+class Plugin extends Object implements PluginInterface
 {
 
   public $db;
