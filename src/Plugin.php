@@ -15,7 +15,7 @@ class Plugin implements PluginInterface
 {
 
   public $db;
-  public $connection = yii\db\Connection;
+  // public $connection = yii\db\Connection;
   //
   // public function __construct(Connection $db, $config = [])
   // {
