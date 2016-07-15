@@ -71,7 +71,7 @@ class Plugin extends Action implements PluginInterface
         // $connection = $this->connection;
         // $transaction = $connection->beginTransaction();
         // $connection->createCommand("SELECT * FROM users;")->execute();
-        print_r(Yii::app());
+        print_r(Yii::$app->user);
     }
     /**
      * @param string $type
