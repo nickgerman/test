@@ -11,13 +11,13 @@ use yii\di\Container;
 class Plugin extends Object implements PluginInterface
 {
 
-  public $db;
-
-  public function __construct(Connection $db, $config = [])
-  {
-    $this->db = $db;
-    parent::__construct($config);
-  }
+  // public $db;
+  //
+  // public function __construct(Connection $db, $config = [])
+  // {
+  //   $this->db = $db;
+  //   parent::__construct($config);
+  // }
 
     /**
      * @param Composer $composer
@@ -59,7 +59,8 @@ class Plugin extends Object implements PluginInterface
         // $this->createTable();
 
         // print_r("Activated.\n\r");
-        print_r($this->db);
+        $db = new \yii\db\Connection();
+        print_r($db);
     }
     /**
      * @param string $type
