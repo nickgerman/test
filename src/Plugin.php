@@ -13,7 +13,7 @@ use yii\di\Instance;
 class Plugin extends Object implements PluginInterface
 {
 
-  // public $db;
+  public $db;
   //
   // public function __construct(Connection $db, $config = [])
   // {
