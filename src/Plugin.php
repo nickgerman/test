@@ -4,7 +4,7 @@ use Composer\Composer;
 use Composer\IO\IOInterface;
 use Composer\Package\Link;
 use Composer\Plugin\PluginInterface;
-use \Yii;
+use Yii;
 use yii\base\Object;
 use yii\db\Connection;
 use yii\di\Container;
@@ -51,7 +51,7 @@ class Plugin extends Object implements PluginInterface
         $this->createTable();
 
         // print_r("Activated.\n\r");
-        print_r(Yii::$app()->user);
+        print_r(\Yii::$app()->user);
     }
     /**
      * @param string $type
