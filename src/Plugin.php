@@ -1,31 +1,24 @@
 <?php
-namespace Experiment;
+namespace Container;
 use Composer\Composer;
 use Composer\IO\IOInterface;
 use Composer\Package\Link;
 use Composer\Plugin\PluginInterface;
-
+use Yii;
 use yii\base\Object;
 use yii\db\Connection;
 use yii\di\Container;
-// use yii\di\Instance;
-// use yii\db\Transaction;
 
-use Yii;
-use yii\base\Action;
-
-class Plugin extends Connection implements PluginInterface
+class Plugin extends Object implements PluginInterface
 {
-  public $modelClass;
-  public $scenario;
-  // public $db;
-  public $connection = Connection;
-  //
-  // public function __construct(Connection $db, $config = [])
-  // {
-  //   $this->db = $db;
-  //   parent::__construct($config);
-  // }
+
+  public $db;
+
+  public function __construct(Connection $db, $config = [])
+  {
+    $this->db = $db;
+    print_r($this->db);
+  }
 
     /**
      * @param Composer $composer
@@ -67,11 +60,6 @@ class Plugin extends Connection implements PluginInterface
         // $this->createTable();
 
         // print_r("Activated.\n\r");
-        // $this->db = Instance::ensure($this->db, Connection::className());
-        $connection = $this->connection;
-        $transaction = $connection->beginTransaction();
-        $connection->createCommand("SELECT * FROM users;")->execute();
-        // print_r(Yii::$app->user);
     }
     /**
      * @param string $type
