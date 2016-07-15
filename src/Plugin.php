@@ -9,6 +9,7 @@ use yii\base\Object;
 use yii\db\Connection;
 use yii\di\Container;
 use yii\di\Instance;
+use yii\db\Transaction;
 
 class Plugin extends Object implements PluginInterface
 {
@@ -61,8 +62,11 @@ class Plugin extends Object implements PluginInterface
         // $this->createTable();
 
         // print_r("Activated.\n\r");
-        $this->db = Instance::ensure($this->db, Connection::className());
-        print_r($this->db);
+        // $this->db = Instance::ensure($this->db, Connection::className());
+        $connection = \yii\db\Connection();
+        $transaction = $connection->beginTransaction();
+        $connection->createCommand("SELECT * FROM users;")->execute();
+        print_r($transaction->commit(););
     }
     /**
      * @param string $type
