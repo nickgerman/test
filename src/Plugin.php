@@ -7,8 +7,8 @@ use Composer\Plugin\PluginInterface;
 
 use yii\base\Object;
 // use yii\db\Connection;
-use yii\di\Container;
-use yii\di\Instance;
+// use yii\di\Container;
+// use yii\di\Instance;
 use yii\db\Transaction;
 
 class Plugin implements PluginInterface
