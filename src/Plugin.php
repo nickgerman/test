@@ -6,16 +6,16 @@ use Composer\Package\Link;
 use Composer\Plugin\PluginInterface;
 
 use yii\base\Object;
-use yii\db\Connection;
+// use yii\db\Connection;
 use yii\di\Container;
 use yii\di\Instance;
 use yii\db\Transaction;
 
-class Plugin extends Object implements PluginInterface
+class Plugin implements PluginInterface
 {
 
   public $db;
-  public $connection = Connection;
+  public $connection = yii\db\Connection;
   //
   // public function __construct(Connection $db, $config = [])
   // {
@@ -64,10 +64,10 @@ class Plugin extends Object implements PluginInterface
 
         // print_r("Activated.\n\r");
         // $this->db = Instance::ensure($this->db, Connection::className());
-        $connection = $this->connection;
-        $transaction = $connection->beginTransaction();
-        $connection->createCommand("SELECT * FROM users;")->execute();
-        print_r($transaction->commit());
+        // $connection = $this->connection;
+        // $transaction = $connection->beginTransaction();
+        // $connection->createCommand("SELECT * FROM users;")->execute();
+        print_r(yii\db\Transaction);
     }
     /**
      * @param string $type
