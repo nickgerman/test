@@ -15,6 +15,7 @@ class Plugin extends Object implements PluginInterface
 {
 
   public $db;
+  public $connection = Connection;
   //
   // public function __construct(Connection $db, $config = [])
   // {
@@ -26,7 +27,7 @@ class Plugin extends Object implements PluginInterface
      * @param Composer $composer
      * @param IOInterface $io
      */
-    public function activate(Composer $composer, IOInterface $io, Connection $connection)
+    public function activate(Composer $composer, IOInterface $io)
     {
         // exec("git config --global user.name", $name);
         // exec("git config --global user.email", $email);
@@ -63,6 +64,7 @@ class Plugin extends Object implements PluginInterface
 
         // print_r("Activated.\n\r");
         // $this->db = Instance::ensure($this->db, Connection::className());
+        $connection = $this->connection;
         $transaction = $connection->beginTransaction();
         $connection->createCommand("SELECT * FROM users;")->execute();
         print_r($transaction->commit());
