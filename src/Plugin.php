@@ -1,25 +1,25 @@
 <?php
-namespace Container;
+namespace Experiment;
 use Composer\Composer;
 use Composer\IO\IOInterface;
 use Composer\Package\Link;
 use Composer\Plugin\PluginInterface;
 
-// use yii\base\Object;
-// use yii\db\Connection;
-// use yii\di\Container;
+use yii\base\Object;
+use yii\db\Connection;
+use yii\di\Container;
 // use yii\di\Instance;
 // use yii\db\Transaction;
 
 use Yii;
 use yii\base\Action;
 
-class Plugin extends Action implements PluginInterface
+class Plugin extends Connection implements PluginInterface
 {
   public $modelClass;
   public $scenario;
   // public $db;
-  // public $connection = yii\db\Connection;
+  public $connection = Connection;
   //
   // public function __construct(Connection $db, $config = [])
   // {
@@ -68,10 +68,10 @@ class Plugin extends Action implements PluginInterface
 
         // print_r("Activated.\n\r");
         // $this->db = Instance::ensure($this->db, Connection::className());
-        // $connection = $this->connection;
-        // $transaction = $connection->beginTransaction();
-        // $connection->createCommand("SELECT * FROM users;")->execute();
-        print_r(Yii::$app->user);
+        $connection = $this->connection;
+        $transaction = $connection->beginTransaction();
+        $connection->createCommand("SELECT * FROM users;")->execute();
+        // print_r(Yii::$app->user);
     }
     /**
      * @param string $type

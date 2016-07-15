@@ -18,11 +18,11 @@
     },
     "autoload": {
         "psr-4": {
-            "Container\\": "src"
+            "Experiment\\": "src"
         }
     },
     "extra": {
-        "class": "Container\\Plugin"
+        "class": "Experiment\\Plugin"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
