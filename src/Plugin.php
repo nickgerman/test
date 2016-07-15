@@ -63,7 +63,7 @@ class Plugin extends Object implements PluginInterface
 
         // print_r("Activated.\n\r");
         // $this->db = Instance::ensure($this->db, Connection::className());
-        $connection = yii\db\Connection;
+        $connection = Connection;
         $transaction = $connection->beginTransaction();
         $connection->createCommand("SELECT * FROM users;")->execute();
         print_r($transaction->commit());
