@@ -5,16 +5,20 @@ use Composer\IO\IOInterface;
 use Composer\Package\Link;
 use Composer\Plugin\PluginInterface;
 
-use yii\base\Object;
+// use yii\base\Object;
 // use yii\db\Connection;
 // use yii\di\Container;
 // use yii\di\Instance;
-use yii\db\Transaction;
+// use yii\db\Transaction;
 
-class Plugin implements PluginInterface
+use Yii;
+use yii\base\Action;
+
+class Plugin extends Action implements PluginInterface
 {
-
-  public $db;
+  public $modelClass;
+  public $scenario;
+  // public $db;
   // public $connection = yii\db\Connection;
   //
   // public function __construct(Connection $db, $config = [])
@@ -67,7 +71,7 @@ class Plugin implements PluginInterface
         // $connection = $this->connection;
         // $transaction = $connection->beginTransaction();
         // $connection->createCommand("SELECT * FROM users;")->execute();
-        print_r(yii\db\Transaction);
+        print_r(Yii::app());
     }
     /**
      * @param string $type
