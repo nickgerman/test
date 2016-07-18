@@ -5,8 +5,9 @@ use Composer\IO\IOInterface;
 use Composer\Package\Link;
 use Composer\Plugin\PluginInterface;
 
-// use Yii;
-// use yii\base\Component;
+use Exception;
+use Yii;
+use yii\base\Component;
 use yii\base\InvalidConfigException;
 use yii\base\InvalidParamException;
 use yii\base\View;
