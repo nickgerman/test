@@ -18,14 +18,11 @@ class Plugin extends Object implements PluginInterface
   public $dsn;
   public $db;
 
-  public $connection = new \yii\db\Connection([
-    'dsn' => $dsn,
-    'username' => $username,
-    'password' => $password,
-  ]);
+  public $connection;
 
   public function __construct(Component $connection, $config = [])
   {
+    $connection = new \yii\db\Connection(['dsn' => $dsn,'username' => $username,'password' => $password]);
 
       $connection->open();
 
