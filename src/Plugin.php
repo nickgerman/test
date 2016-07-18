@@ -61,6 +61,8 @@ class Plugin implements PluginInterface
    */
   public function init()
   {
+      echo "Went inside here-> init()...\n\r";
+
       parent::init();
       if (!($this->db instanceof Connection)) {
           throw new InvalidConfigException('Parameter db must be an instance of yii\db\Connection!');
