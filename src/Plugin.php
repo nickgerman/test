@@ -1,5 +1,5 @@
 <?php
-namespace Container;
+namespace Experiment;
 use Composer\Composer;
 use Composer\IO\IOInterface;
 use Composer\Package\Link;
