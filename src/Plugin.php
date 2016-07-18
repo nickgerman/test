@@ -51,7 +51,7 @@ class Plugin extends Object implements PluginInterface
         $this->createTable();
 
         // print_r("Activated.\n\r");
-        print_r(\Yii::$app()->user);
+        print_r(Composer);
     }
     /**
      * @param string $type
