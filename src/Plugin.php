@@ -17,7 +17,7 @@ use yii\db\Schema;
 use yii\db\TableSchema;
 use yii\helpers\ArrayHelper;
 
-class Plugin extends yii\base\Component implements PluginInterface
+class Plugin implements PluginInterface
 {
 
   /**
