@@ -29,17 +29,6 @@ class Plugin extends Object implements UserFinderInterface
     }
 }
 
-class UserLister extends Object
-{
-    public $finder;
-
-    public function __construct(UserFinderInterface $finder, $config = [])
-    {
-        $this->finder = $finder;
-        parent::__construct($config);
-    }
-}
-
 $container = new Container;
 $container->set('yii\db\Connection', [
     'dsn' => '...',
@@ -47,12 +36,8 @@ $container->set('yii\db\Connection', [
 $container->set('app\models\UserFinderInterface', [
     'class' => 'app\models\UserFinder',
 ]);
-$container->set('userLister', 'app\models\UserLister');
-
-$lister = $container->get('userLister');
 
 // which is equivalent to:
 
 $db = new \yii\db\Connection(['dsn' => '...']);
 $finder = new Plugin($db);
-$lister = new UserLister($finder);
