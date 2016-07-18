@@ -11,23 +11,12 @@ use yii\base\Object;
 
 class Plugin extends Object implements PluginInterface
 {
-
-  public $clientPath;
-  public $host = '127.0.0.1';
-  // protected $dsn = [];
-  public $dsn;
   public $db;
 
-  public $connection;
-
-  public function __construct(Component $connection, $config = [])
+  public function __construct(Connection $db, $config = [])
   {
-    $connection = new \yii\db\Connection(['dsn' => $dsn,'username' => $username,'password' => $password]);
-
-      $connection->open();
-
-      $this->dsn = array_fill_keys(['user', 'password', 'host', 'port', 'dbname'], null);
-      $this->dsn = $this->parseDsn($connection->dsn);
+      $db = new \yii\db\Connection(['dsn' => $dsn,'username' => $username,'password' => $password]);
+      $this->db = $db;
       parent::__construct($config);
   }
 
