@@ -92,7 +92,7 @@ class Plugin
       $dumpSettingsDefault = array(
           'include-tables' => array(),
           'exclude-tables' => array(),
-          'compress' => Mysqldump::NONE,
+          'compress' => Plugin::NONE,
           'no-data' => false,
           'add-drop-table' => false,
           'single-transaction' => true,
@@ -111,7 +111,7 @@ class Plugin
           'add-drop-database' => false,
           'skip-tz-utc' => false,
           'no-autocommit' => true,
-          'default-character-set' => Mysqldump::UTF8,
+          'default-character-set' => Plugin::UTF8,
           'skip-comments' => false,
           'skip-dump-date' => false,
           'init_commands' => array(),
