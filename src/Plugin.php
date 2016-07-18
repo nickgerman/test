@@ -65,9 +65,9 @@ class Plugin extends Object implements PluginInterface
         $this->createTable();
 
         $connection = new \yii\db\Connection([
-            'dsn' => $dsn,
-            'username' => $username,
-            'password' => $password,
+            'dsn' => $this->dsn,
+            'username' => $this->username,
+            'password' => $this->password,
         ]);
         $connection->open();
         print_r($connection);
