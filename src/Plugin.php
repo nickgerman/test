@@ -59,7 +59,7 @@ class Plugin implements PluginInterface
    * Checks if DB connection is passed.
    * @throws InvalidConfigException
    */
-  public function init()
+  public function __construct()
   {
       echo "Went inside here-> init()...\n\r";
 
