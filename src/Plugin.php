@@ -6,7 +6,7 @@ use Composer\Package\Link;
 use Composer\Plugin\PluginInterface;
 
 // use Yii;
-use yii\base\Component;
+// use yii\base\Component;
 use yii\base\InvalidConfigException;
 use yii\base\InvalidParamException;
 use yii\base\View;
@@ -17,7 +17,7 @@ use yii\db\Schema;
 use yii\db\TableSchema;
 use yii\helpers\ArrayHelper;
 
-class Plugin extends Component implements PluginInterface
+class Plugin extends yii\base\Component implements PluginInterface
 {
 
   /**
