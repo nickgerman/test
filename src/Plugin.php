@@ -7,7 +7,7 @@ use Composer\Plugin\PluginInterface;
 
 use yii\base\Component;
 use yii\base\Object;
-use yii\db\Connection;
+// use yii\db\Connection;
 
 class Plugin extends Object implements PluginInterface
 {
@@ -18,8 +18,17 @@ class Plugin extends Object implements PluginInterface
   public $dsn;
   public $db;
 
+  public $connection = new \yii\db\Connection([
+    'dsn' => $dsn,
+    'username' => $username,
+    'password' => $password,
+  ]);
+
   public function __construct(Component $connection, $config = [])
   {
+
+      $connection->open();
+
       $this->dsn = array_fill_keys(['user', 'password', 'host', 'port', 'dbname'], null);
       $this->dsn = $this->parseDsn($connection->dsn);
       parent::__construct($config);
