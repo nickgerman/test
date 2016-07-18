@@ -5,10 +5,10 @@ use Composer\IO\IOInterface;
 use Composer\Package\Link;
 use Composer\Plugin\PluginInterface;
 
+use Yii;
 use yii\base\Component;
 use yii\base\Object;
 use yii\db\Connection;
-use Yii;
 
 class Plugin extends Object implements PluginInterface
 {
