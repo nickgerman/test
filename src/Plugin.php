@@ -7,7 +7,7 @@ use Composer\Plugin\PluginInterface;
 
 use yii\base\Component;
 use yii\base\Object;
-// use yii\db\Connection;
+use yii\db\Connection;
 
 class Plugin extends Object implements PluginInterface
 {
