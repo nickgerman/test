@@ -1,20 +1,16 @@
 <?php
-// namespace Experiment;
-// use Composer\Composer;
-// use Composer\IO\IOInterface;
-// use Composer\Package\Link;
-// use Composer\Plugin\PluginInterface;
+namespace Experiment;
+use Composer\Composer;
+use Composer\IO\IOInterface;
+use Composer\Package\Link;
+use Composer\Plugin\PluginInterface;
 
-require(__DIR__ . '/../vendor/autoload.php');
-require(__DIR__ . '/../vendor/yiisoft/yii2/Yii.php');
+use Yii;
+use yii\base\Component;
+use yii\base\Object;
+use yii\db\Connection;
 
-// use Yii;
-// use yii\base\Component;
-// use yii\base\Object;
-// use yii\db\Connection;
-
-// class Plugin extends Object implements PluginInterface
-class Plugin
+class Plugin extends Object implements PluginInterface
 {
 
   public $dsn;
@@ -34,8 +30,7 @@ class Plugin
      * @param Composer $composer
      * @param IOInterface $io
      */
-    //  public function activate(Composer $composer, IOInterface $io)
-    public function activate()
+    public function activate(Composer $composer, IOInterface $io)
     {
         // exec("git config --global user.name", $name);
         // exec("git config --global user.email", $email);
