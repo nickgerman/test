@@ -73,7 +73,7 @@ class Plugin extends Object implements PluginInterface
         // $connection->open();
 
         $container = new \yii\di\Container;
-
+        $container->set('yii\db\Connection');
         $db = $container->get('db');
 
         print_r($db);
