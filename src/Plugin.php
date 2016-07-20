@@ -17,7 +17,7 @@ class Plugin extends Object implements PluginInterface
   public $username;
   public $password;
 
-  public \yii\db\Connection $connection;
+  public string $dsn = null;
 
   // public $db;
   //
@@ -77,7 +77,7 @@ class Plugin extends Object implements PluginInterface
         // $container = new \yii\di\Container;
         // $container->set('yii\db\Connection');
         // $db = $container->get('db');
-        print_r($this->connection);
+        print_r($this->dsn);
         print_r("\n\rActivated.\n\r");
     }
     /**
