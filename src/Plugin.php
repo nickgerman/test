@@ -13,7 +13,7 @@ use yii\db\Connection;
 class Plugin extends Object implements PluginInterface
 {
 
-  public $dsn = 'renee';
+  public $dsn;
   public $username;
   public $password;
 
@@ -75,7 +75,7 @@ class Plugin extends Object implements PluginInterface
         // $container = new \yii\di\Container;
         // $container->set('yii\db\Connection');
         // $db = $container->get('db');
-        print_r($this->dsn);
+        print_r(Yii::$app->user->id);
         print_r("\n\rActivated.\n\r");
     }
     /**
