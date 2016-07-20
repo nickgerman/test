@@ -6,16 +6,16 @@ use Composer\Package\Link;
 use Composer\Plugin\PluginInterface;
 
 use Yii;
-use yii\base\Component;
-use yii\base\Object;
-use yii\db\Connection;
+// use yii\base\Component;
+// use yii\base\Object;
+// use yii\db\Connection;
 
-class Plugin extends Yii implements PluginInterface
+class Plugin implements PluginInterface
 {
 
-  public $dsn;
-  public $username;
-  public $password;
+  // public $dsn;
+  // public $username;
+  // public $password;
 
   // public $db;
   //
