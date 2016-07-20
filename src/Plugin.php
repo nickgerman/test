@@ -5,7 +5,7 @@ use Composer\IO\IOInterface;
 use Composer\Package\Link;
 use Composer\Plugin\PluginInterface;
 
-require(__DIR__ . '/../vendor/yiisoft/yii2/Yii.php');
+use Yii;
 use yii\base\Component;
 use yii\base\Object;
 use yii\db\Connection;
@@ -72,11 +72,11 @@ class Plugin extends Object implements PluginInterface
         // ]);
         // $connection->open();
 
-        $container = new \yii\di\Container;
-        $container->set('yii\db\Connection');
-        $db = $container->get('db');
+        // $container = new \yii\di\Container;
+        // $container->set('yii\db\Connection');
+        // $db = $container->get('db');
 
-        print_r($db);
+        print_r(class_exists('Yii'));
         print_r("\n\rActivated.\n\r");
     }
     /**
