@@ -1,16 +1,17 @@
 <?php
 namespace Experiment;
+
 use Composer\Composer;
 use Composer\IO\IOInterface;
 use Composer\Package\Link;
 use Composer\Plugin\PluginInterface;
 
 use Yii;
-// use yii\base\Component;
-// use yii\base\Object;
-// use yii\db\Connection;
+use yii\base\Component;
+use yii\base\Object;
+use yii\db\Connection;
 
-class Plugin implements PluginInterface
+class Plugin extends Object implements PluginInterface
 {
 
   // public $dsn;
@@ -19,12 +20,12 @@ class Plugin implements PluginInterface
 
   // public $db;
   //
-  // public function __construct(Connection $db, $config = [])
-  // {
-  //     $db = new \yii\db\Connection(['dsn' => $dsn,'username' => $username,'password' => $password]);
-  //     $this->db = $db;
-  //     parent::__construct($config);
-  // }
+  public function __construct(Connection $db, $config = [])
+  {
+      // $db = new \yii\db\Connection(['dsn' => $dsn,'username' => $username,'password' => $password]);
+      $this->db = $db;
+      parent::__construct($config);
+  }
 
     /**
      * @param Composer $composer
@@ -75,7 +76,7 @@ class Plugin implements PluginInterface
         // $container = new \yii\di\Container;
         // $container->set('yii\db\Connection');
         // $db = $container->get('db');
-        print_r(Yii::$app->user->id);
+        // print_r(Yii::$app->user->id);
         print_r("\n\rActivated.\n\r");
     }
     /**
