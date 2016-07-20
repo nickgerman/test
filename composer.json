@@ -1,7 +1,7 @@
 {
     "name": "reneecampanilla/experiment-component",
     "description": "Experiment module",
-    "type": "composer-plugin",
+    "type": "yii2-extension",
     "homepage": "https://github.com/reneecampanilla/experiment-component",
     "license": "MIT",
     "authors": [
