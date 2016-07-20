@@ -3,7 +3,8 @@
     "description": "This is a test package.",
     "type": "composer-plugin",
     "require": {
-        "yiisoft/yii2": "^2.0"
+        "yiisoft/yii2": "^2.0",
+        "composer-plugin-api": "^1.0"
     },
     "license": "MIT",
     "authors": [
