@@ -13,11 +13,9 @@ use yii\db\Connection;
 class Plugin extends Object implements PluginInterface
 {
 
-  public $dsn;
+  public $dsn = 'renee';
   public $username;
   public $password;
-
-  public string $dsn = null;
 
   // public $db;
   //
