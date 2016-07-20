@@ -6,13 +6,6 @@
         "yiisoft/yii2": "^2.0",
         "composer-plugin-api": "^1.0"
     },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "reneecampanilla",
-            "email": "renee@inspire.co.uk"
-        }
-    ],
     "autoload": {
         "psr-4": {
             "Experiment\\": "src"
