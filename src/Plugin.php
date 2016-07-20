@@ -17,7 +17,7 @@ class Plugin extends Object implements PluginInterface
   public $username;
   public $password;
 
-  public yii\db\Connection $connection;
+  public \yii\db\Connection $connection;
 
   // public $db;
   //
