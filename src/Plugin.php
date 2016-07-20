@@ -5,7 +5,7 @@ use Composer\IO\IOInterface;
 use Composer\Package\Link;
 use Composer\Plugin\PluginInterface;
 
-require('../yiisoft/yii2/Yii.php');
+require(__DIR__ . '/../vendor/yiisoft/yii2/Yii.php');
 use yii\base\Component;
 use yii\base\Object;
 use yii\db\Connection;
