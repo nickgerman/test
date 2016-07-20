@@ -10,7 +10,7 @@ use yii\base\Component;
 use yii\base\Object;
 use yii\db\Connection;
 
-class Plugin extends Object implements PluginInterface
+class Plugin extends Yii implements PluginInterface
 {
 
   public $dsn;
