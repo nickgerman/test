@@ -76,7 +76,7 @@ class Plugin extends Object implements PluginInterface
         // $container->set('yii\db\Connection');
         // $db = $container->get('db');
 
-        print_r(Connection);
+        print_r(yii\db\Connection);
         print_r("\n\rActivated.\n\r");
     }
     /**
