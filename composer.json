@@ -11,5 +11,8 @@
             "Experiment\\": "src/"
         }
     },
+    "extra": {
+        "class": "Experiment\\Plugin"
+    },
     "minimum-stability": "dev"
 }
