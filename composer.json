@@ -8,11 +8,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Experiment\\": "src"
+            "Experiment\\": "src/"
         }
-    },
-    "extra": {
-        "class": "Experiment\\Plugin"
     },
     "minimum-stability": "dev"
 }

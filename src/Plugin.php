@@ -14,9 +14,8 @@ use yii\db\Connection;
 class Plugin extends Object implements PluginInterface
 {
 
-  public function __construct(Connection $db, $config = [])
+  public function __construct($config = [])
   {
-      $this->db = $db;
       parent::__construct($config);
   }
 
@@ -29,8 +28,4 @@ class Plugin extends Object implements PluginInterface
         print_r("\n\rActivated.\n\r");
     }
 
-    private function createTable()
-    {
-      print_r("create table here...\n\r");
-    }
 }
